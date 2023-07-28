@@ -6,6 +6,7 @@ public class Ex35_String {
 	public static void main(String[] args) {
 		
 		/*
+		git 테스트
 		문자열
 		- 물리적으로 참조형이지만, 약간의 값형의 성질을 가진다.
 		
