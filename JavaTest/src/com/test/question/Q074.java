@@ -29,27 +29,28 @@ public class Q074 {
 		int n=1;
 		
 		int len = num.length;
-		int middleValue = len/2;
+		int halfValue = len/2;
 		
 		
 		//0행~중간행(num.length/2)
-		for (int i=0; i<=middleValue; i++) {
-			for(int j=middleValue-i; j<=len-j*2; j++) {		//중간위치부터 프린트
-				int end = len-j*2;
+		for (int i=0; i<=halfValue; i++) {
+			for(int j=halfValue-i; j<=halfValue+i; j++) {		//중간위치부터 프린트
 				num[i][j] = n;
 				n++;
 			}
 		}
 		
-		for (int i=middleValue+1; i<len; i++) {
-			for (int j=1; j<=len-j*2; j++) {
+		//중간행+1~마지막행
+		for (int i=halfValue+1; i<len; i++) {
+			for (int j=i-halfValue; j<=6-i ;j++) {	
 				num[i][j] = n;
 				n++;
 			}
 				
+				
 		}
 		
-		
+		//
 		//결과 출력
 		for (int i=0; i<num.length; i++) {
 			for (int j=0; j<num.length; j++) {

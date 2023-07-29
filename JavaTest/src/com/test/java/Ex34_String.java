@@ -33,12 +33,13 @@ public class Ex34_String {
 		//- 구분자를 기준으로 쪼개는 메소드
 		
 		String name = "홍길동,아무개,,강호동,박명수";
-		String[] names = name.split(",");		//구분자는 사라진다.
+		String[] names = name.split("박명수");		//구분자는 사라진다.
 		
 		System.out.println(Arrays.toString(names));
 		
 		for (int i=0; i<names.length; i++) {
-			System.out.println(names[i]);
+//			System.out.println(names[i]);
+			System.out.println(names.length);
 		}
 		
 	}
