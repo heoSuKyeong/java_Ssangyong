@@ -13,7 +13,7 @@ public class Q084 {
 	public static void main(String[] args) {
 		
 		String content = "안녕~ 길동아~ 잘가~ 길동아~";		//대상 문자열
-		String word = "길동";		//검색 문자열
+		String word = "~";		//검색 문자열
 		
 		int cnt=0;
 		int index=-1;

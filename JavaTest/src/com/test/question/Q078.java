@@ -23,44 +23,7 @@ public class Q078 {
 		//변수 생성
 		int len = num.length;
 		
-		for (int i=0; i<len; i++) {	//반복 횟수
-			for (int j=0; j<Math.ceil(len); j++) {
-				
-			}
-			
-		}
 		
-		
-		
-		
-//		for (int i=0; i<5; i++) {
-//			if (i%2 == 0) {								//ㄱ
-//				int j=0;
-//				for (j=i; j<num.length-i; j++) {
-//					num[i][j] = n;
-//					n++;
-//				}
-//				if (j>=num.length-1-i) {
-//					for(int k=i+1; k<num.length-i; k++) {
-//						num[k][j-1] = n;
-//						n++;
-//					}
-//				}
-//				
-//			} else {								//ㄴ
-//				int index = num.length-i;
-//				int j=0;
-//				for (j=num.length-i-1; j>=i-1; j--) {
-//					num[num.length-i][j] = n;
-//					n++;
-//				}
-//				for (int k=num.length-i-1; k>=i; k--) {
-//					num[k][j+1] = n;
-//					n++;
-//				}
-//			}
-//			
-//		}
 		
 		
 		

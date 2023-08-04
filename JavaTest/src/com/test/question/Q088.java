@@ -3,7 +3,7 @@ package com.test.question;
 import java.util.Scanner;
 
 public class Q088 {
-//
+다시하기
 //	금지어를 마스킹 처리 하시오.
 //
 //	조건..
@@ -21,6 +21,7 @@ public class Q088 {
 		
 		String[] words = {"바보", "멍청이"};
 		
+		
 		int count =0;
 		
 		Scanner scan = new Scanner(System.in);
@@ -32,16 +33,16 @@ public class Q088 {
 		//방법 2 : indexOf 로 위치를 찾고, 마스킹 처리
 		int index = -1;
 		
-		while(true) {
-			for (int i=0; i<words.length; i++) {
-				index = input.indexOf(words[i], index);
-				count++;
-				if (index < 0) {
-					break;
-				}
-				index += words[i].length();
-			}
-		}
+//		while(true) {
+//			for (int i=0; i<words.length; i++) {
+//				index = input.indexOf(words[i], index);
+//				count++;
+//				if (index < 0) {
+//					break;
+//				}
+//				index += words[i].length();
+//			}
+//		}
 //		
 //		for (int i=0; i<words.length; i++) {
 //			String masking = "";

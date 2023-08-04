@@ -51,17 +51,17 @@ public class Q089 {
 		case 5:
 			return "만";
 		case 6:
-			return "십만";
+			return "십";
 		case 7:
-			return "백만";
+			return "백";
 		case 8:
-			return "천만";
+			return "천";
 
 		default:
-			break;
+			return "";
 		}
 		
-		return "";
+		
 	}
 
 	private static String getInt(char num) {

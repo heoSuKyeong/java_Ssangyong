@@ -103,6 +103,7 @@ public class Q091 {
 				continue;
 			}
 			if (isNum1) {
+				if (isOperator) 
 				for (int j=0; j<operator.length; j++) {
 					if (c == operator[j]) {
 						isOperator = true;

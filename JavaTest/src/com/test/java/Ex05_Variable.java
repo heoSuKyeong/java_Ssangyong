@@ -13,7 +13,7 @@ public class Ex05_Variable {
 		
 		b1 = Byte.MAX_VALUE; //127
 		b1 = Byte.MIN_VALUE; //-128
-		System.out.println(b1); 
+		System.out.println("byte: " + b1); 
 		
 		short s1 = 128;
 		System.out.println("s1 : " + s1);
@@ -65,12 +65,13 @@ public class Ex05_Variable {
 		float f1 = 3.14F;
 		System.out.println("f1 : " + f1);
 		
+		f1 = 12345678901234567890123456789F;
+		System.out.println("f1 : " + f1); //1234567890000000000000000000
+
 		double d1 = 6.28;
 		System.out.println("d1 : " + d1);
 		
-		f1 = 12345678901234567890123456789F;
 		d1 = 12345678901234567890123456789D;
-		System.out.println("f1 : " + f1); //1234567890000000000000000000
 		System.out.println("d1 : " + d1); //1234567891234567800000000000
 		
 		double d2 = 0.25;

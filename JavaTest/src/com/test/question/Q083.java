@@ -34,7 +34,9 @@ public class Q083 {
 		//확장자 별 개수세기
 		for (int i=0; i<filename.length; i++) {
 			int index = filename[i].lastIndexOf(".");		// "." 마지막 인덱스를 찾아서
+			
 			String extension1 = filename[i].substring(index+1);	//확장자를 분리
+			
 			for (int j=0; j<extension.length; j++) {		//분리한 확장자가 확장자 배열에 있는지 확인
 				if (extension1.equals(extension[j])) {		//있다면, count +1
 					count[j] += 1;

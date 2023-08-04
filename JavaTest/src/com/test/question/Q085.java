@@ -31,8 +31,6 @@ public class Q085 {
 			System.out.println("올바르지 않은 주민등록번호입니다.");
 		}
 		
-//		int month = Integer.valueOf(jumin.substring(2,4));
-//		System.out.println(month);
 	}
 
 private static boolean isValidation(String jumin) {
@@ -55,25 +53,24 @@ private static boolean isValidation(String jumin) {
 	
 	//유효성 검사 공식
 	int[] checkAry = {2,3,4,5,6,7,0,8,9,2,3,4,5,6};
-//	int[] checkIndex = {0,3,5,7,9};
 	
 	int sum=0;
 	for(int i=0; i<jumin.length()-1; i++) {
 		if (i==6) {		//'-'는 패스
 			continue;
 		}
-		int value = Integer.valueOf(jumin.substring(i,i+1));
-//		int check = checkAry[checkIndex[i]];
+		int value = Integer.valueOf(jumin.substring(i,i+1));	//주민번호 각 자리수를 int로 형변환
 		sum += (value * checkAry[i]);
 	}
-	sum %= 11;
-	int verification = 11 - sum;
+	
+	int verification = 11 - (sum % 11);		//공식
 	
 	if (verification > 10 ) {	//10은 0으로, 11은 1로 만들어줌
 		verification %= verification;
 	}
 	
-	int lastNum = Integer.valueOf(jumin.substring(jumin.length()-1));
+	//951220-1234567
+	int lastNum = Integer.valueOf(jumin.substring(jumin.length()-1));	//주민번호 마지막번호
 	if(verification == lastNum) {
 		return true;
 	}
