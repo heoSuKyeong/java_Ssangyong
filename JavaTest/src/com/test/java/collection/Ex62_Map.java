@@ -101,5 +101,17 @@ public class Ex62_Map {
 			System.out.println(key + ":" + map.get(key));
 		}
 		
+		
+		//교실
+		HashMap<String, String> list = new HashMap<String, String>();
+		
+		list.put("반장",  "홍길동");
+		list.put("부반장","아무개");
+		list.put("미화부장", "하하하");
+		
+		
+		
+		
+		
 	}
 }

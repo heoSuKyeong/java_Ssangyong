@@ -80,6 +80,7 @@ public class Ex61_Stack {
 			System.out.println(queue.poll());
 		}
 		
+		queue.add("짜장면");
 		queue.add("탕수육");
 		//4. 요소 확인
 		System.out.println(queue.peek());
