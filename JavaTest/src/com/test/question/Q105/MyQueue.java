@@ -7,24 +7,30 @@ public class MyQueue {
 	
 	public MyQueue() {
 		this.index=0;
+		this.que = new String[4];
 	}
 	
 	public boolean add(String value) {
 		
 		try {
-			if (this.index == 0) { // this.list ==null
-				this.que = new String[4];
-			}
+			//생성자로 뺐음
+//			if (this.index == 0) { // this.list ==null
+//				this.que = new String[4];
+//			}
 			
 //			배열의 방이 남아 있는지 확인, 없으면 두배로 늘리기
-			if(this.index == this.que.length) {
-				String[] temp = new String[this.que.length];
-				temp = this.que;
-				this.que = new String[this.que.length * 2];
-				for (int i=0; i<this.index; i++) {
-					this.que[i] = temp[i];
-				}
-				
+//			if(this.index == this.que.length) {
+//				String[] temp = new String[this.que.length];
+//				temp = this.que;
+//				this.que = new String[this.que.length * 2];
+//				for (int i=0; i<this.index; i++) {
+//					this.que[i] = temp[i];
+//				}
+//				
+//			}
+			
+			if(ckeckLength()) {
+				doubleList();
 			}
 			
 			this.que[this.index] = value;
@@ -38,6 +44,26 @@ public class MyQueue {
 		
 	}
 	
+	private boolean ckeckLength() {
+		
+		if (this.index == this.que.length) {
+			return true;
+		}
+		return false;
+	}
+
+	private void doubleList() {
+		
+		String temp[] = new String[this.que.length * 2];
+		
+		for (int i=0; i<this.que.length; i++) {
+			temp[i] = que[i];
+		}
+		
+		this.que = temp;
+		
+	}
+
 	public String poll() {
 		
 		if (this.index<=0) {
@@ -75,14 +101,23 @@ public class MyQueue {
 	
 	public void trimToSize() {
 		
-		String[] temp = new String[this.que.length];
-		temp = this.que;
+//		String[] temp = new String[this.que.length];
+//		temp = this.que;
+//		
+//		this.que = new String[this.index];
+//		
+//		for (int i=0; i<this.index; i++) {
+//			this.que[i] = temp[i];
+//		}
 		
-		this.que = new String[this.index];
+		String[] temp = new String[this.index];
 		
 		for (int i=0; i<this.index; i++) {
-			this.que[i] = temp[i];
+			temp[i] = this.que[i];
 		}
+		
+		this.que = temp;
+		
 	}
 	
 	

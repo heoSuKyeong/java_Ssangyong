@@ -27,6 +27,7 @@ public class Main {
 
 		//크기 조절
 		queue.trimToSize();
+		System.out.println(queue.size());
 
 		//초기화
 		queue.clear();

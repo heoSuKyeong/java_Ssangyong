@@ -28,6 +28,7 @@ public class Main {
 
 		//크기 조절
 		stack.trimToSize();
+		System.out.println(stack.size());
 
 		//초기화
 		stack.clear();
