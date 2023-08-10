@@ -1,0 +1,55 @@
+1. 컴퓨터에 git 설치
+
+2. git 폴더 생성
+C:\class\code\git\center : 강의실 pc
+C:\class\code\git\center\project : 프로젝트 작업 폴더(수업)
+
+C:\class\code\git\home : 집 pc
+
+git 사용자 계정 등록하기(--global > 전역 설정, 안붙으면 로컬 설정)
+$git config --global user.name 'fcb1014'
+$git config --global user.email 'fcb1014@hanyang.ac.kr'
+$git config --global --list > 잘 등록되었는지 확인
+
+3. 로컬 저장소(Local Repository) 생성 > 스테이징 + 커밋 만들기
+- 해달 폴더에 마우스 오른쪽 > git bash here 클릭
+$git init
+$git config --global init.defaultBranch main   >> master 브런치를 main 브런치로 바꿔줌
+
+4. 컴퓨터에 파일 만들기
+"plan.txt"
+
+5. git에 파일 추적 기능 부여
+$git add plan.txt / git add .
+
+$git status > 현재 상황
+
+6. commit(현재 상태를 백업하는 행동)
+$git commit -m '1. 콘솔 프로젝트 계획 파일 추가'
+
+7. git staus > git log
+
+8. plan 파일 수정
+$git status > modified 에러
+
+9. $git add plan.txt
+$git commit -m '2. 프로젝트 주제 추가'
+
+
+------------------------------------------------------
+github에 내 로컬피씨(강의) 연결
+
+1. github 우측 상단 내 프로필 클릭 > new 클릭
+2. 레포지토리 이름, 공개여부 설정
+3. 원격 저장소 등록하기
+$git remote -v > 연결되었는지 확인
+$git remote add origin 깃허브내 레포지토리 주소(https://github.com/heoSuKyeong/java_Ssangyong.git)
+
+4. 센터 > 수업 > 커밋 > 깃헙 올리기
+$git push origin main
+
+
+-------------------------------------------------------
+집에서 레포지토리 다운받아 연결하기
+$git clone https://github.com/heoSuKyeong/java_Ssangyong.git .
+>> 마지막 " ." 찍기@!!

@@ -7,6 +7,7 @@ public class Ex66_Anonymous {
 		익명 객체, Anonymous Object
 		- 익명 클래스, Anonymous Class
 		- 이름 없는 클래스
+		- 단타성이 있을 때
 		
 		*/
 		

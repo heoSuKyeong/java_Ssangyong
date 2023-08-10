@@ -12,7 +12,7 @@ public class Q124 {
 		
 		try {
 			
-			String path = "C:\\Users\\fcb10\\Downloads\\파일_입출력_문제";
+			String path = "C:\\class\\code\\java\\file\\파일_입출력_문제";
 			
 			BufferedReader memberReader = new BufferedReader(new FileReader(path + "\\검색_회원.dat"));
 			BufferedReader orderReader = new BufferedReader(new FileReader(path + "\\검색_주문.dat"));
@@ -38,7 +38,7 @@ public class Q124 {
 				if (name.equals(searchName)) {
 					frag = true;	//회원 내역에 있음.
 					System.out.println("==== 구매내역 ====");
-					System.out.printf("[번호]\t[이름]\t[상품명]\t[개수]\t[배송지]\n");
+					System.out.println("[번호]\t[이름]\t[상품명]\t[개수]\t[배송지]");
 					
 					String line2 = null;
 					while((line2=orderReader.readLine())!=null) {
