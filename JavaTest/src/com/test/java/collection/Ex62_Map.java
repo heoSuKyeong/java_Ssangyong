@@ -31,6 +31,7 @@ public class Ex62_Map {
 		- map 계열은 없는 키의 값을 요구하면 null을 반환한다.
 		
 		*/
+		/*
 		//String - key 자료형 > 방이름
 		//Integer - value 자료형 > 데이터
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
@@ -108,10 +109,55 @@ public class Ex62_Map {
 		list.put("반장",  "홍길동");
 		list.put("부반장","아무개");
 		list.put("미화부장", "하하하");
+		*/
+		
+		m1();
 		
 		
 		
+	}
+
+	private static void m1() {
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+
+		//1. 요소 추가 및 수정
+		map.put("국어",  100);	//int 국어 = 100;
+		map.put("영어",  90);
+        
+		map.put("국어", 95);	//데이터 추가가 아닌 수정이 된다.
+		System.out.println(map.get("국어"));
+        
+        
+		//2. 요소 개수
+		System.out.println(map.size());
+
+		//3. 요소 읽기
+		System.out.println(map.get("국어"));
+		System.out.println(map.get("영어"));
+        System.out.println(map.get("국사"));	//null
+
+		//6. 요소 검색
+		System.out.println(map.containsKey("국어"));	//true
+		System.out.println(map.containsKey("국사"));	//false
+		System.out.println(map.containsValue(90));
+
+		//7. 요소 삭제
+		map.remove("국어");
+        System.out.println(map.size());
+        
+        //8. 초기화
+		map.clear();
+        
+ 		//Loop - 일괄 탐색
+		map.put("국어", 100);
+		map.put("영어", 90);
+		map.put("수학", 80);
 		
+		Set<String> set = map.keySet();
+		System.out.println(set);
 		
+		for (String key : set) {
+			System.out.println(key + ":" + map.get(key));
+		}
 	}
 }

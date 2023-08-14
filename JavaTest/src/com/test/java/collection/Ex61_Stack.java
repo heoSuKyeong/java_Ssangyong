@@ -39,7 +39,7 @@ public class Ex61_Stack {
 		
 //		m1();	//stack
 //		m2();	//stack.peek
-		m3();	//Queue
+//		m3();	//Queue
 		
 		
 	}

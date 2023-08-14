@@ -56,8 +56,43 @@ public class Ex60_List {
 //		m3();	//차원 ArrayList
 //		m4();	//성적표 만들기
 //		m5();	//ArrayList(컬렉션) 특징
-		m6();	//초기 용량 설정 & trimToSize
+//		m6();	//초기 용량 설정 & trimToSize
+		m7();
 		
+	}
+
+	private static void m7() {
+	    ArrayList<String> list = new ArrayList<String>();
+	    
+	    //1. 요소 추가하기
+	    list.add("바나나");
+		list.add("딸기");
+	    
+	    list.add(1, "망고");
+	    
+	    //2. 요소 접근(읽기)
+	    System.out.println(list.get(0));
+	    
+	    //3. 요소의 개수
+	    System.out.println(list.size());	//3
+	    
+	    //4. 요소 수정
+	    String temp = list.set(0, "딸바");
+	    System.out.println(temp);
+	    
+	    //5. 요소 삭제
+	    list.remove(2);
+	    
+	    //6. 기타
+	    System.out.println(list.indexOf("포도"));
+	    System.out.println(list.indexOf("망고"));
+		System.out.println(list.lastIndexOf("딸바"));
+	    System.out.println(list.contains("망고"));
+	    System.out.println(list.isEmpty());
+	    
+	    
+	    System.out.println(list.toString());
+	    System.out.println(list); 
 	}
 
 	private static void m6() {
