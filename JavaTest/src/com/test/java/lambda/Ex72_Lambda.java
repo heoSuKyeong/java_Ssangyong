@@ -31,9 +31,9 @@ public class Ex72_Lambda {
 		
 		*/
 		
-//		m1();	//다양한 형태의 람다식	> 사용자 정의 함수형 인터페이스
+		m1();	//다양한 형태의 람다식	> 사용자 정의 함수형 인터페이스
 //		m2();	//정렬
-		m3();	//Q122 성적순으로 정렬
+//		m3();	//Q122 성적순으로 정렬
 		
 	}
 
@@ -129,7 +129,7 @@ public class Ex72_Lambda {
 
 	private static void m1() {
 		//요구사항) MyInterface를 구현한 객체를 1개 만드시오.
-		
+		/*
 		MyInterface m1 = new MyClass();
 		m1.test();
 		
@@ -147,7 +147,7 @@ public class Ex72_Lambda {
 		};
 		m3.test();
 		System.out.println();
-		
+		*/
 		
 		NoParameterNoReturn pr1 = new NoParameterNoReturn() {
 			@Override
@@ -155,6 +155,7 @@ public class Ex72_Lambda {
 				System.out.println("pr1");
 			}
 		};
+		pr1.call();
 		
 		NoParameterNoReturn pr2 = () -> {
 			System.out.println("pr2");
@@ -163,6 +164,7 @@ public class Ex72_Lambda {
 		
 		//***블럭 생략 가능(실행문 한줄일 경우)
 		NoParameterNoReturn pr3 = () -> System.out.println("pr3");
+		pr3.call();
 		
 		ParameterNoReturn pr4 = (int num) -> System.out.println(num);
 		pr4.call(1);
